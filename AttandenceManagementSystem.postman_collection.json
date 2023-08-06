@@ -1,0 +1,740 @@
+{
+	"info": {
+		"_postman_id": "9d803da7-7f5f-4bc9-af38-0ea6b02d13ba",
+		"name": "AttandenceManagementSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "jwtrefresh",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTMyNzk3NSwianRpIjoiZmNlZGNiNjQtZmM1ZS00NTkwLWFkZGItMzBjZDRmM2IwZmNiIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJEZXZAMSIsIm5iZiI6MTY5MTMyNzk3NSwiZXhwIjoxNjkxMzU2Nzc1fQ.MjDe1psTKROltYLftmETHi52xJg57PHaiuku1m-QidI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "0e7a7751-3ddc-48dd-9ed6-ffaba434fa44",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/jwtrefresh",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"jwtrefresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"full_name\":\"Dev anand\",\r\n  \"username\":\"Dev@1\",\r\n  \"email\":\"Dev1@gmail.com\",\r\n  \"password\":\"Dev@1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\":\"Dev@1\",\r\n  \"password\":\"Dev@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resetpassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"Dev1@gmail.com\",\r\n    \"password\":\"Dev@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/resetpassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"resetpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDepartment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"department_name\":\"CSE\",\r\n    \"submitted_by\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/addDepartment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"addDepartment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getdepartmentlist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTMyNDA1OCwianRpIjoiZjViZTQ2NmYtNzYwMy00ZjdmLWI1NDMtMWJjOWFhNmYzODA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldkAxIiwibmJmIjoxNjkxMzI0MDU4LCJleHAiOjE2OTEzMjQ5NTh9.GRLopA4WhZkjtdsOVtkeNIs3yEhWhPRckd5p9NwuSsk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/getDepartmentlist?submitted_by=5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getDepartmentlist"
+					],
+					"query": [
+						{
+							"key": "submitted_by",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDepartment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"department_name\":\"CSE A\",\r\n    \"department_id\":\"1\",\r\n    \"submitted_by\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/updateDepartment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"updateDepartment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"course_name\":\"CSE\",\r\n    \"department_id\":\"1\",\r\n    \"semester\":\"1\",\r\n    \"class\":\"A\",\r\n    \"lecture_hours\":\"1\",\r\n    \"submitted_by\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/addCourse",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"addCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCourselist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTMyNDA1OCwianRpIjoiZjViZTQ2NmYtNzYwMy00ZjdmLWI1NDMtMWJjOWFhNmYzODA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldkAxIiwibmJmIjoxNjkxMzI0MDU4LCJleHAiOjE2OTEzMjQ5NTh9.GRLopA4WhZkjtdsOVtkeNIs3yEhWhPRckd5p9NwuSsk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/getDepartmentlist?submitted_by=5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getDepartmentlist"
+					],
+					"query": [
+						{
+							"key": "submitted_by",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"course_name\":\"CSE A\",\r\n    \"course_id\":\"1\",\r\n    \"submitted_by\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/updateCourse",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"updateCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addStudent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\":\"Dev anand\",\r\n    \"department_id\":\"1\",\r\n    \"class\":\"A\",\r\n    \"submitted_by\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/addStudent",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"addStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStudentlist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTMyNDA1OCwianRpIjoiZjViZTQ2NmYtNzYwMy00ZjdmLWI1NDMtMWJjOWFhNmYzODA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldkAxIiwibmJmIjoxNjkxMzI0MDU4LCJleHAiOjE2OTEzMjQ5NTh9.GRLopA4WhZkjtdsOVtkeNIs3yEhWhPRckd5p9NwuSsk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/getStudentlist?submitted_by=5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getStudentlist"
+					],
+					"query": [
+						{
+							"key": "submitted_by",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateStudentdetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\":\"Dev anand\",\r\n    \"department_id\":\"1\",\r\n    \"class\":\"A\",\r\n    \"student_id\":\"1\",\r\n    \"submitted_by\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/updateStudentdetails",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"updateStudentdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "markAttandence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\":\"Dev anand\",\r\n    \"department_id\":\"1\",\r\n    \"class\":\"A\",\r\n    \"submitted_by\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/addStudent",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"addStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStudentAttandencelist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTMyNDA1OCwianRpIjoiZjViZTQ2NmYtNzYwMy00ZjdmLWI1NDMtMWJjOWFhNmYzODA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldkAxIiwibmJmIjoxNjkxMzI0MDU4LCJleHAiOjE2OTEzMjQ5NTh9.GRLopA4WhZkjtdsOVtkeNIs3yEhWhPRckd5p9NwuSsk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/getStudentAttandencelist?submitted_by=5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getStudentAttandencelist"
+					],
+					"query": [
+						{
+							"key": "submitted_by",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getsingleStudentAttandencelist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTMyNDA1OCwianRpIjoiZjViZTQ2NmYtNzYwMy00ZjdmLWI1NDMtMWJjOWFhNmYzODA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldkAxIiwibmJmIjoxNjkxMzI0MDU4LCJleHAiOjE2OTEzMjQ5NTh9.GRLopA4WhZkjtdsOVtkeNIs3yEhWhPRckd5p9NwuSsk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/getsingleStudentAttandencelist?submitted_by=5&student_id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getsingleStudentAttandencelist"
+					],
+					"query": [
+						{
+							"key": "submitted_by",
+							"value": "5"
+						},
+						{
+							"key": "student_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateStudentAttandence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "3c5d39b0-6156-4a83-ae86-b2d0db8f01bb",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"student_id\":\"1\",\r\n    \"present\":\"false\",\r\n    \"course_name\":\"CSE A\",\r\n    \"attendance_id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/updateStudentAttandence",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"updateStudentAttandence"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
